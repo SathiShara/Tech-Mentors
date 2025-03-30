@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tech Mentors</title>
+
+<!--Add icon link-->
+<link rel="icon" type="image/ico" href="https://i.pinimg.com/736x/6c/ef/5e/6cef5ed341634187a313f3314e0c0143.jpg" sizes="32*32">	
+	<style>
+* {
+	box-sizing: border-box;
+}
+
+body,html {
+	height: 100%;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+
+/* header */
+.header{
+font-family: sans-serif;
+font-weight: bold;
+text-align: center;
+color: #4682B4;
+font-size: 40px;
+}
+
+
+/*Put a bagground image to header*/
+.bgImg{
+	background-image: url("https://i.pinimg.com/736x/52/dc/9a/52dc9a78046741dd076d71d65e0f9379--college-admission-university-college.jpg");
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;	
+}
+
+
+/* Add a black background color to the top navigation bar */
+.topnav { 
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #AFEEEE;
+  color: black;
+}
+
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color: #4682B4;
+  color: white;
+}
+
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+
+/*side bar/left column*/
+.side {
+	float: left;
+	width: 50%;
+	height: 500px;
+	-ms-flex: 30%;
+	flex: 10%;
+	background-color: #4682B4;
+	padding: 50px;
+	font-family: sans-serif;
+}
+
+
+/*Find-courses*/
+.Find-courses:after {
+	content: "";
+    display: table;
+    clear: both;
+	background-color: #ccc;
+	display: -ms-flexbox;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+
+/*Find a course - text*/
+.side a.Find-courses-text{
+	text-align: left;
+	background-color: white;
+	width: 100%;
+	padding: 10px;
+	margin: 5px;
+}
+
+
+/*expanboxes*/
+.expanboxes {
+	text-align: left;
+	background-color: #ccc;
+	width: 100%;
+	padding: 20px;
+	margin: 5px;
+	font-family: sans-serif;
+}
+
+/*Add a footer to bottom of page*/
+*{
+	padding:0;
+	margin:0;
+}
+
+html{
+	background-color: white;
+}
+
+body{
+	font:16px/1.6 sans-serif;,  sans-serif;
+}
+
+header{
+	text-align: center;
+	padding-top: 100px;
+	margin-bottom:190px;
+}
+
+header h1{
+	font: normal 32px/1.5 'Open Sans', sans-serif;
+	color: #3F71AE;
+	padding-bottom: 16px;
+}
+
+header h2{
+	color: #F05283;
+}
+
+header span{
+	color: #3F71EA;
+}
+
+
+/* The footer is fixed to the bottom of the page */
+
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+
+.footer-distributed .footer-left ,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #4682B4;
+	font-weight: bold;
+	font: normal 40px 'Cookie', sans-serif;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #DAA520;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #DAA520;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+	
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width:45px;
+	height: 45px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}	
+	</style>
+</head>
+<body>
+
+
+
+<!--Navigation bar at top-->
+
+<div class="topnav">
+  <a class="active" href="#home">HOME</a>
+
+  <a href="About tech mentors.html">ABOUT TECH MENTORS</a>
+  <a href="Courses.html">COURSES</a>
+  <a href="Admission.html">ADMISSION</a>
+  <a href="contact us.html">CONTACT US</a>
+  <input type="text" placeholder="Search..">
+
+ <div class="bgImg">
+  	<img src="https://i.pinimg.com/736x/52/dc/9a/52dc9a78046741dd076d71d65e0f9379--college-admission-university-college.jpg">
+ </div>
+
+ <div class="header">
+	<p align="center">INSTITUTE OF TECH MENTORS</p>
+ </div>
+ </div>
+ <br>
+
+
+
+<!--Find a course that right you-->
+
+<div class="Find-courses">
+
+	<div class="Find-courses-text" href="#text" style="height: 20px;">Find a course that right for you</div><br>
+
+	<div class="side">
+
+	<a href="Engineering.html">
+	<button class="expanboxes" style="height: 20px;" >Bachelor of Engineering (Hons) Civil</button><br>
+	<button class="expanboxes" style="height: 20px;" >Bachelor of Software Engineering</button><br>
+	<button class="expanboxes" style="height: 20px;" >Bachelor of Engineering (Hons) Mechanical</button><br>
+	<button class="expanboxes" style="height: 20px;" >Bachelor of Computer Engineerin</button><br></a>
+
+	<a href="Courses.html">
+	<button class="expanboxes" style="height: 20px;" >Master of Information Systems Management</button><br></a>
+	<button class="expanboxes" style="height: 20px;">Master in Banking & Finanace</button><br>
+    <button class="expanboxes" style="height: 20px;">MSC in Financial Mathematics</button><br>
+
+</div>
+
+<div class="side">
+
+	
+	<a href="dip1.html">
+	<button class="expanboxes" style="height: 20px;">Diploma in ICT</button><br></a>
+
+	<a href="dip2.html">
+	<button class="expanboxes" style="height: 20px;">Diploma in Engineering Technology</button><br></a>
+
+	<a href="dip3.html">
+	<button class="expanboxes" style="height: 20px;">Diploma in Software Engineering</button><br></a>
+
+	<a href="dip4.html">
+	<button class="expanboxes" style="height: 20px;">Diploma in Computer network architect</button><br></a>
+
+	<a href="c1.html">
+	<button class="expanboxes" style="height: 20px;">Certificate in Computer Applications</button><br></a>
+
+    <a href="c2.html">
+	<button class="expanboxes" style="height: 20px;">Certificate in Computer Science</button><br></a>
+
+	<a href="c3.html">
+	<button class="expanboxes" style="height: 20px;">Certificate in Human Resource Management Law</button><br></a>
+    
+</div>
+</div>
+
+
+<!--Add a footer-->
+<footer class="footer-distributed">
+
+        <div class="footer-left">
+            
+    
+            <h3>Institute of <br>Tech Mentors</h3>
+
+            <p class="footer-links">
+                <a href="Tech Mentors.html">Home</a>
+                |
+                <a href="About tech mentors.html">About Tech Mentors</a>
+                |
+                <a href="Courses.html">Courses</a>
+                |
+                <a href="contact us.html">Contact us</a>
+            </p>
+
+            <p class="footer-company-name">© 2021 Institute of Tech Mentors Pvt. Ltd.</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                  <p><span>James Road,
+                     Colombo 02</span>
+                    Sri Lanka.</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>Tel: +9411 2 444 444</p><br>
+               
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:info@techmentors.edu">info@techmentors.edu</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>All copyrights Reserved by Tech Mentors Institute</span>
+                <span>Terms & Conditions</span>
+                <span>Privancy Policy</span>
+                
+            </p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/index.php?next=https%3A%2F%2Fwww.facebook.com%2Fhome.php">
+                	<img src="https://i.pinimg.com/originals/59/8c/ae/598cae0d99a402d8c8501151305dcfdf.gif" width="50px" height="45px"><i class="fa fa-facebook"></i></a>
+
+                <a href="https://twitter.com/?lang=en">
+                	<img src="https://i.pinimg.com/736x/86/32/e7/8632e7e79c86690f52458fc8a9cc4e05--twitter-twitter-android-smartphone.jpg" width="50px" height="45px" ><i class="fa fa-twitter"></i></a>
+
+                <a href="https://www.instagram.com/">
+                	<img src="https://i.pinimg.com/736x/f3/11/60/f31160a633767d91beadb8cb142f1cd8.jpg" width="50px" height="45px" ><i class="fa fa-instagram"></i></a>
+                
+                <a href="https://www.youtube.com/">
+                	<img src="https://i.pinimg.com/736x/ca/6d/67/ca6d67e60f758d352745329b283e8f32.jpg" width="50px" height="45px" ><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

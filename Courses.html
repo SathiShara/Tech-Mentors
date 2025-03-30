@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  font-family: sans-serif;
+  overflow: hidden;
+  background-color: #4682B4;
+  background-image: url("https://i.pinimg.com/736x/28/f4/75/28f4750aea4c5d8ec2a8c8e67a78a5d0.jpg"); 
+  background-size: 70%;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: #808080;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #808080;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+* {
+  box-sizing: border-box;
+}
+.detailsE {
+  font-size: 20px;
+  font-family: sans-serif;
+  display: inline-block;
+  width: 100%;
+  background-color: #ADD8E6;
+  background-size: 50px;
+  padding: 10px;
+}
+
+.detail-eng {
+  font-family: sans-serif;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  background-color: #708090;
+}
+
+/*button for get more engineering courses*/
+.eng-more {
+  font-family: sans-serif;
+  font-display: center;
+  background-color: #FFD700;
+  display: block;
+  position: left;
+  height: 50px;
+  width: 200px;
+  border-radius: 15px;
+  border: none;
+}
+
+.detailsIT {
+  font-size: 20px;
+  font-family: sans-serif;
+  display: inline-block;
+  width: 100%;
+  background-color: #D8BFD8;
+  background-size: 50px;
+  padding: 10px;
+}
+
+.detail-IT {
+  font-family: sans-serif;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  background-color: #708090;
+}
+
+.detailsBIO {
+  font-size: 20px;
+  font-family: sans-serif;
+  display: inline-block;
+  width: 100%;
+  background-color: #9ACD32;
+  background-size: 50px;
+  padding: 10px;
+}
+
+.detail-BIO {
+  font-family: sans-serif;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  background-color: #708090;
+}
+
+
+/*management*/
+.detailsman {
+  font-size: 20px;
+  font-family: sans-serif;
+  display: inline-block;
+  width: 100%;
+  background-color: #191970;
+  background-size: 50px;
+  padding: 10px;
+}
+
+.detail-man {
+  font-family: sans-serif;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  background-color: #708090;
+}
+
+/*Maste of information systems management*/
+.detailPostGIsm {
+  font-size: 20px;
+  font-family: sans-serif;
+  display: inline-block;
+  width: 100%;
+  background-color: #DAA520;
+  background-size: 50px;
+  padding: 10px;
+}
+
+.detail-postGIsm {
+  font-family: sans-serif;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  background-color: #708090;
+}
+
+/*postgraduate in banking*/
+.detailBank {
+  font-size: 20px;
+  font-family: sans-serif;
+  display: inline-block;
+  width: 100%;
+  background-color: #FFD700;
+  background-size: 50px;
+  padding: 10px;
+}
+
+.detail-Bank {
+  font-family: sans-serif;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  background-color: #708090;
+}
+
+/*postgraduate in banking*/
+.detailFM {
+  font-size: 20px;
+  font-family: sans-serif;
+  display: inline-block;
+  width: 100%;
+  background-color: #20B2AA;
+  background-size: 50px;
+  padding: 10px;
+}
+
+.detail-FM {
+  font-family: sans-serif;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  background-color: #708090;
+}
+
+/*Add a footer to bottom of page*/
+*{
+  padding:0;
+  margin:0;
+}
+
+html{
+  background-color: white;
+}
+
+body{
+  font:16px/1.6 sans-serif;,  sans-serif;
+}
+
+header{
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom:190px;
+}
+
+header h1{
+  font: normal 32px/1.5 'Open Sans', sans-serif;
+  color: #3F71AE;
+  padding-bottom: 16px;
+}
+
+header h2{
+  color: #F05283;
+}
+
+header span{
+  color: #3F71EA;
+}
+
+
+/* The footer is fixed to the bottom of the page */
+
+footer{
+  position: fixed;
+  bottom: 0;
+}
+
+@media (max-height:800px){
+  footer { position: static; }
+  header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+  background-color: #2c292f;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
+}
+
+
+.footer-distributed .footer-left ,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 30%;
+}
+
+.footer-distributed h3{
+  color:  #4682B4;
+  font-weight: bold;
+  font: normal 40px 'Cookie', sans-serif;
+  margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+  width: 30%;
+}
+
+.footer-distributed h3 span{
+  color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #DAA520;
+  margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  #e0ac1c;
+  text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #DAA520;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+  
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width:45px;
+  height: 45px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <h1>&ensp;<font style="color: white;">TECH MENTORS-COURSES</font></h1>
+
+  <div class="subnav">
+    <a href="Tech Mentors.html">
+    <button class="subnavbtn">HOME</button></a>
+    <div class="subnav-content">
+    </div>
+  </div> 
+
+  <div class="subnav">
+
+    <button class="subnavbtn">UNDERGRADUATE <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      
+      <a href="#e2">Engineering</a>
+      <a href="#it">IT</a>
+      <a href="#bio">Bio Science</a>
+      <a href="#man">Management</a>
+    </div>
+  </div> 
+
+<div class="subnav">
+    <button class="subnavbtn">POSTGRADUATE <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#Mism">Master of Information Systems Management</a>
+      <a href="#Bnk">Master in Banking & Finanace</a>
+      <a href="#FM">MSC in Financial Mathematics</a>
+    </div>
+  </div>
+
+  <div class="subnav">
+    <button class="subnavbtn">DIPLOMA <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="dip1.html">Diploma in ICT</a>
+      <a href="dip2.html">Diploma in Engineering Technology</a>
+      <a href="dip3.html">Diploma in Software Engineering</a>
+       <a href="dip4.html">Diploma in Computer network architect</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">CERTIFICATE <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="c1.html">Certificate in Computer Applications</a>
+      <a href="c2.html">Certificate in Computer Science</a>
+      <a href="c3.html">Certificate in Human Resource Management Law</a>
+    </div>
+  </div>
+  
+  </div>
+</div>
+<br>
+<br>
+
+<!--Engineering-->
+
+<div class="detailsE">
+    <h2 id="e2"><b>Engineering</b></h2>
+    <img src="https://i.pinimg.com/736x/fc/3d/a7/fc3da75eaa52b930084364849d3cc872--female-leaders-strong-female.jpg" height="500px" width="740px">
+    <img src="https://i.pinimg.com/736x/5a/51/39/5a513900c9d07755c0ae02d815f3efff.jpg" height="500px" width="740px">
+</div>
+<br>
+
+<div class="detail-eng">
+  <h2>Faculty of Engineering</h2>
+  <br>
+  <h3>Engineering solutions for a digital future.</h3>
+  <p>We are educating leaders, forging strong industry partnerships and meeting challenges in healthcare, infrastructure, food and the environment. We are also creating smarter technology, changing the way we live and work.</p>
+  <hr>
+  <br>
+  <h3>Studying Engineering</h3>
+  <p>Engineers, project managers and computing professionals develop innovative, creative and sustainable solutions that promote positive change worldwide. If you’re passionate about meeting these challenges, start your journey here.</p>
+<hr><br>
+<a href="Engineering.html">
+<button class="eng-more" >More Courses in Engineering  <i class="fa fa-caret-right"></i></button></a>
+<br>
+<br>
+  </div>
+
+
+
+<!--Information Technology-->
+
+  <div class="detailsIT">
+    <h2 id="it"><b>Information Technology</b></h2>
+    <img src="https://i.pinimg.com/736x/43/97/cb/4397cb38f730f8474064c345d8046d1b--growing-business-technology-news.jpg" height="500px" width="740px">
+    <img src="https://i.pinimg.com/736x/15/c1/34/15c134032f3f368a6aba0d4b4fd757ae.jpg" height="500px" width="740px">
+</div>
+<br>
+
+<div class="detail-IT">
+  <h2>Faculty of Information Technology</h2>
+  <br>
+  <p>We are educators, researchers and innovators. Every boundary we push, every project we pursue is underpinned by one important mission: IT for Social Good. Join us on our path to positive change – and a safer, fairer world.</p>
+  <hr>
+  <br>
+  <h3>Our premier events</h3>
+  <p>Hear from the best minds in IT about their ground-breaking discoveries and insights. Whether you’re an academic, future student or industry professional, our diverse events will open your eyes and expand your thinking.</p>
+<hr>
+<br>
+<h3>Life-changing experiences</h3>
+<p>We think our IT courses are among the very best. But don't take it from us - hear what our students and graduates have to say.</p>
+<hr>
+<br>
+<h3>Our social good projects</h3>
+<p>Fighting carbon emissions. Preventing suicide. Predicting epileptic seizures. Our research is achieving amazing technological advancements – to create a better world for all.</p>
+<hr><br>
+<h3><b>Course Type  :</b></h3>Full Time<br><hr><br>
+<h3><b>Duration     :</b></h3>3 Years<br><hr><br>
+<h3><b>Course Fee   :</b></h3>$7010.66<br><hr><br>
+<h3><b>Entry Requirements :</b></h3><br>
+<ol type="circle">
+  <li>Student who passed Local A/L or London A/L in any stream.</li>
+  <li>Those who done the Diploma in ICT</li>
+</ol><hr><br>
+
+  </div>
+
+
+
+ <!--Bio science-->
+
+<div class="detailsBIO">
+    <h2 id="bio"><b>Bio Science</b></h2>
+    <img src="https://i.pinimg.com/736x/88/92/15/889215a3968a2cc56df14343785fbd88--am%C3%A9rica-latina.jpg" height="500px" width="740px">
+    <img src="https://i.pinimg.com/736x/f0/80/a3/f080a39b5de657783b162a4dfbca5a4d.jpg" height="500px" width="740px">
+</div>
+<br>
+
+<div class="detail-BIO">
+  <h2>Faculty of Bio Science</h2>
+  <br>
+  <p>Tech Mentors university’s Faculty of Biosciences is one of most vibrant and interactive life science faculties in the areas of research and education.  It includes a wide spectrum of disciplines, ranging from molecular biosciences to biodiversity, including molecular biotechnology and pharmacy. Research questions are addressed by many different experimental and computer-aided methods ranging from crystallography to whole genome sequencing. Highlights of our scientific life can be found under News, everything you may want to know about individual research groups and collaborative research networks can be found under.</p>
+  <hr>
+  <br>
+  <h3>Research</h3>
+  <p>World-class scientific expertise and facilities with high-quality training at honours, masters and doctorate levels.</p>
+<hr>
+<br>
+<h3>Engagement & Industry</h3>
+<p>Industry, researchers, teachers, alumni, students and future scientists: Work with us to shape the future of science</p>
+<hr><br>
+<h3><b>Course Type  :</b></h3>Full Time<br><hr><br>
+<h3><b>Duration     :</b></h3>4 Years<br><hr><br>
+<h3><b>Course Fee   :</b></h3>$8010.66<br><hr><br>
+<h3><b>Entry Requirements :</b></h3><br>
+<ol type="circle">
+  <li>Student who passed Local A/L or London A/L in Bioscience stream.</li>
+</ol><hr><br>
+  </div>
+
+
+
+<!--Management-->
+
+<div class="detailsman">
+    <h2 id="man"><b>Management</b></h2>
+    <img src="https://i.pinimg.com/736x/39/7f/15/397f152608fc8f51f3802880c51fa56f.jpg" height="500px" width="740px">
+    <img src="https://i.pinimg.com/736x/73/22/bd/7322bd93ff7cc7177c0e400fac6ea5ce.jpg" height="500px" width="740px">
+</div>
+<br>
+
+<div class="detail-man">
+  <h2>Faculty of Management</h2>
+  <br>
+  <p>The Faculty of Management of Tech Mentors Studies focuses on management education more than just business management. The commitment is thought leadership with a deep understanding of business. The approach to pedagogy combines fieldwork, case studies and instrumented feedback with a strong emphasis on concepts and theory. The intent is to encourage intellectual curiosity and open minds to the adventure of ideas.</p>
+  <hr><br>
+<h3><b>Course Type  :</b></h3>Full Time<br><hr><br>
+<h3><b>Duration     :</b></h3>3 Years<br><hr><br>
+<h3><b>Course Fee   :</b></h3>$6010.66<br><hr><br>
+<h3><b>Entry Requirements :</b></h3><br>
+<ol type="circle">
+  <li>Student who passed Local A/L or London A/L in Commerce stream and Science stream</li>
+  <li>Those who done the CIMA</li>
+</ol><hr><br>
+  </div>
+
+
+  <!--Master of Information systems management-->
+
+<div class="detailPostGIsm">
+    <h2 id="Mism"><b>Master of Information Systems Management</b></h2>
+</div>
+<br>
+
+<div class="detail-postGIsm">
+  <p>The Master of Information Management and Systems (MIMS) program is a 48 unit, two-year full time program, designed to train students in the skills needed to succeed as information professionals. Such professionals must be familiar with the theory and practice of storing, organizing, retrieving and analyzing information in a variety of settings in business, the public sector, and the academic world. Technical expertise alone is not sufficient for success; I School graduates will be expected to perform and manage a multiplicity of information related tasks.</p>
+  <hr>
+  <br>
+  <p><b>Course Type    :</b></p>
+  <hr>Part Time
+  <br>
+  <br>
+  <p><b>Duration   :</b></p>
+  <hr>2 & half Years
+  <br>
+  <br>
+  <p><b>Course Fee   :</b></p>
+  <hr>$2050.22
+  <br>
+  <br>
+  <p><b>Enter Requirements  :</b></p>
+  <hr>
+  <ol type="circle">
+    <li>An undergraduate degree in any disipline, with a weighted average mark of at least 65% or equivalent.</li>
+    <li>At least one year documented relevant work experience.</li>
+    <li>A four year Honours degree in Information Systems.</li>
+  </ol>
+
+  </div>
+
+
+
+ <!--Postgraduate diploma in Banking-->
+  
+<div class="detailBank">
+    <h2 id="Bnk"><b>Master in Banking & Finance</b></h2>
+</div>
+<br>
+
+<div class="detail-Bank">
+  <p>The Master of Banking and Finance (MA) program objective is to provides students with a deeper understanding of the field that allows the student to analyze and solve financial issues. The program provides a unique learning experience where formal knowledge transfer of technical concepts is rooted in business practice.</p>
+  <hr>
+  <br>
+  <p><b>Course Type    :</b></p>
+  <hr>Part Time
+  <br>
+  <br>
+  <p><b>Duration   :</b></p>
+  <hr>2 & half Years
+  <br>
+  <br>
+  <p><b>Course Fee   :</b></p>
+  <hr>$2050.22
+  <br>
+  <br>
+  <p><b>Enter Requirements  :</b></p>
+  <hr>
+  <ol type="circle">
+    <li>An undergraduate degree in any disipline, with a weighted average mark of at least 65% or equivalent.</li>
+    <li>At least one year documented relevant work experience.</li>
+    <li>A four year Honours degree in Management.</li>
+  </ol>
+  <hr>
+  <br>
+  <p><b>Core Courses and Topics in Banking and Finance :</b></p>
+  <hr>
+  <br>
+  <ol type="circle">
+    <li>Financial Planning</li>
+    <li>Options, Futures and Risk ManagementMaster of Banking and Finance</li>
+    <li>Financial Management Theory</li>
+    <li>Capital Markets</li>
+<li>Portfolio Management and Theory</li>
+<li>Personal Development</li>
+<li>Critical Thinking and Communication</li>
+<li>Bank Lending</li>
+<li>International Banking and Finance</li>
+<li>Banking Law and Practice</li>
+  </ol>
+
+  </div>
+
+  <!--MSC in financial mathematics-->
+  
+<div class="detailFM">
+    <h2 id="FM"><b>MSC in Financial Mathematics</b></h2>
+</div>
+<br>
+
+<div class="detail-FM">
+  <p>Demand for people who can apply mathematical skills in business and financial environments is growing rapidly, but a typical undergraduate mathematics degree may not adequately prepare a student to work effectively in a business environment.</p>
+  <hr>
+  <br>
+  <p><b>Course Type    :</b></p>
+  <hr>Part Time
+  <br>
+  <br>
+  <p><b>Duration   :</b></p>
+  <hr>2 & half Years
+  <br>
+  <br>
+  <p><b>Course Fee   :</b></p>
+  <hr>$2050.22
+  <br>
+  <br>
+  <p><b>Enter Requirements  :</b></p>
+  <hr>
+  <ol type="circle">
+    <li>At least 30 credits, including all of the required courses.</li>
+    <li>Graduate Field Study Internship.</li>
+    <li>An Exit Project approved by the student’s advisor.</li>
+  </ol>
+
+  </div>
+
+<!--Add a footer-->
+<footer class="footer-distributed">
+
+        <div class="footer-left">
+            
+    
+            <h3>Institute of <br>Tech Mentors</h3>
+
+            <p class="footer-links">
+                <a href="Tech Mentors.html">Home</a>
+                |
+                <a href="About tech mentors.html">About Tech Mentors</a>
+                |
+                <a href="Courses.html">Courses</a>
+                |
+                <a href="contact us.html">Contact us</a>
+            </p>
+
+            <p class="footer-company-name">© 2021 Institute of Tech Mentors Pvt. Ltd.</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                  <p><span>James Road,
+                     Colombo 02</span>
+                    Sri Lanka.</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>Tel: +9411 2 444 444</p><br>
+               
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:info@techmentors.edu">info@techmentors.edu</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>All copyrights Reserved by Tech Mentors Institute</span>
+                <span>Terms & Conditions</span>
+                <span>Privancy Policy</span>
+                
+            </p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/index.php?next=https%3A%2F%2Fwww.facebook.com%2Fhome.php">
+                  <img src="https://i.pinimg.com/originals/59/8c/ae/598cae0d99a402d8c8501151305dcfdf.gif" width="50px" height="45px"><i class="fa fa-facebook"></i></a>
+
+                <a href="https://twitter.com/?lang=en">
+                  <img src="https://i.pinimg.com/736x/86/32/e7/8632e7e79c86690f52458fc8a9cc4e05--twitter-twitter-android-smartphone.jpg" width="50px" height="45px" ><i class="fa fa-twitter"></i></a>
+
+                <a href="https://www.instagram.com/">
+                  <img src="https://i.pinimg.com/736x/f3/11/60/f31160a633767d91beadb8cb142f1cd8.jpg" width="50px" height="45px" ><i class="fa fa-instagram"></i></a>
+                
+                <a href="https://www.youtube.com/">
+                  <img src="https://i.pinimg.com/736x/ca/6d/67/ca6d67e60f758d352745329b283e8f32.jpg" width="50px" height="45px" ><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
